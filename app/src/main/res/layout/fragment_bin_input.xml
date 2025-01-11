@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.BinInputFragment">
+
+    <EditText
+        android:id="@+id/bin_input"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/search_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/common"
+        android:layout_marginEnd="@dimen/common"
+        android:padding="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bin_input_background"
+        android:hint="@string/bin_hint"
+        android:singleLine="true">
+    </EditText>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/bin_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bin_input"
+        app:layout_constraintBottom_toBottomOf="@id/bin_input"
+        android:layout_marginEnd="@dimen/common"
+        android:text="@string/search">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
