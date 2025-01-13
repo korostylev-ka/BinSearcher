@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="search_input_background">#03A9F4</color>
+    <color name="card_info_background">#03A9F4</color>
+    <color name="card_tv_background">#464A4C</color>
+    <color name="search_button">#03A9F4</color>
+    <color name="history_back_buttons">#464A4C</color>
 </resources>

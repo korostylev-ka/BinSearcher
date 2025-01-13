@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BinSearcher</string>
+    <string name="bin">БИН:</string>
     <string name="number">Номер</string>
     <string name="length">Длина:</string>
     <string name="luhn">Алгоритм Луна:</string>
@@ -25,4 +26,7 @@
     <string name="no_data">нет данных:</string>
     <string name="search">найти</string>
     <string name="bin_hint">введите 8 цифр карты</string>
+    <string name="history">история</string>
+    <string name="back_to_search">обратно к поиску</string>
+    <string name="max_size_bin">Максимальная длина 8 цифр!</string>
 </resources>

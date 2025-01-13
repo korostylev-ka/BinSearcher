@@ -16,24 +16,44 @@
         android:layout_marginStart="@dimen/common"
         android:layout_marginEnd="@dimen/common"
         android:padding="@dimen/padding"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bin_input_background"
         android:hint="@string/bin_hint"
         android:singleLine="true">
     </EditText>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/search_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintStart_toEndOf="@id/bin_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/bin_input"
         app:layout_constraintBottom_toBottomOf="@id/bin_input"
         android:layout_marginEnd="@dimen/common"
-        android:text="@string/search">
-
+        style="@style/Widget.AppTheme.SearchButton"
+        app:icon="@drawable/ic_find_button_48dp"
+        >
+    </com.google.android.material.button.MaterialButton>
+    <Button
+        android:id="@+id/history_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common"
+        android:backgroundTint="@color/history_back_buttons"
+        app:layout_constraintTop_toBottomOf="@id/bin_input"
+        android:text="@string/history">
+    </Button>
+    <Button
+        android:id="@+id/back_to_search_button"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common"
+        android:backgroundTint="@color/history_back_buttons"
+        app:layout_constraintTop_toBottomOf="@id/history_button"
+        android:text="@string/back_to_search">
     </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

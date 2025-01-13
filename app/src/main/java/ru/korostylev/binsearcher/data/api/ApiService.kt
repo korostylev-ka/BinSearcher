@@ -10,6 +10,4 @@ interface ApiService {
     @GET("/{bin}")
     suspend fun getCardInfo(@Path("bin") bin: Int): Response<CardInfo>
 
-    @GET("random/{wordSize}")
-    suspend fun getRandomWord(@Path("wordSize") wordSize: Int): Response<String>
 }

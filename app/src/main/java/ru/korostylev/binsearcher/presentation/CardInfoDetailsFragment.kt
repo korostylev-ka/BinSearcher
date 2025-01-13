@@ -1,16 +1,17 @@
 package ru.korostylev.binsearcher.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ru.korostylev.binsearcher.R
 import ru.korostylev.binsearcher.databinding.FragmentCardInfoDetailsBinding
 import ru.korostylev.binsearcher.domain.CardInfo
 
+@AndroidEntryPoint
 class CardInfoDetailsFragment : Fragment() {
 
     private var _binding: FragmentCardInfoDetailsBinding? = null

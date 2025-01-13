@@ -9,15 +9,15 @@ import androidx.room.Query
 @Dao
 interface CardInfoDao {
 
-    @Query("SELECT * FROM cardinfoentity")
+    @Query("SELECT * FROM CardInfoEntity ORDER BY id DESC")
     fun getCardInfoList(): LiveData<List<CardInfoEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addCardInfo(cardInfoEntity: CardInfoEntity)
 
-    @Query("DELETE FROM cardinfoentity WHERE id=:cardInfoId")
+    @Query("DELETE FROM CardInfoEntity WHERE id=:cardInfoId")
     fun deleteCardInfo(cardInfoId: Int)
 
-    @Query("SELECT * FROM cardinfoentity WHERE id=:shopItemId LIMIT 1")
+    @Query("SELECT * FROM CardInfoEntity WHERE id=:shopItemId LIMIT 1")
     fun getCardInfo(shopItemId: Int): CardInfoEntity
 }

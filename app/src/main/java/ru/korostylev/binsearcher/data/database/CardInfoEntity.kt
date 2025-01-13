@@ -11,6 +11,7 @@ import ru.korostylev.binsearcher.domain.Number
 data class CardInfoEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
+    val bin: Int,
     @Embedded
     val number: Number,
     val scheme: String?,
@@ -21,4 +22,9 @@ data class CardInfoEntity(
     val country: Country,
     @Embedded(prefix = "bank")
     val bank: Bank
-)
+) {
+    companion object {
+
+         const val UNDEFINED_ID = 0
+    }
+}

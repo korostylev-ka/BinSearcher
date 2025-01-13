@@ -7,7 +7,8 @@ class CardInfoMapper {
 
     fun mapToEntity(cardInfo: CardInfo): CardInfoEntity {
         return CardInfoEntity(
-            id = -1,
+            id = CardInfoEntity.UNDEFINED_ID,
+            bin = cardInfo.bin,
             number = cardInfo.number,
             scheme = cardInfo.scheme,
             type = cardInfo.type,
@@ -20,6 +21,8 @@ class CardInfoMapper {
 
     fun mapFromEntity(cardInfoEntity: CardInfoEntity): CardInfo {
         return CardInfo(
+            id = cardInfoEntity.id,
+            bin = cardInfoEntity.bin,
             number = cardInfoEntity.number,
             scheme = cardInfoEntity.scheme,
             type = cardInfoEntity.type,
@@ -28,5 +31,11 @@ class CardInfoMapper {
             country = cardInfoEntity.country,
             bank = cardInfoEntity.bank
         )
+    }
+
+    fun mapListFromEntity(list: List<CardInfoEntity>): List<CardInfo> {
+        return list.map {
+            mapFromEntity(it)
+        }
     }
 }
